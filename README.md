@@ -18,7 +18,7 @@ This project is a simple fractal mind map tool built with HTML, CSS, and JavaScr
 
 ## iOS Setup
 1. Ensure you have Xcode installed
-2. Install iOS development dependencies:
+2. Install iOS development dependencies and build:
    ```bash
    npm install
    npx cap sync
