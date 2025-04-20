@@ -1,0 +1,21 @@
+{
+  "name": "mindmap-ipad-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.1"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^7.2.0",
+    "@capacitor/core": "^7.2.0",
+    "@capacitor/filesystem": "^7.0.1",
+    "@capacitor/ios": "^7.2.0",
+    "@capacitor/share": "^7.0.1"
+  }
+}

@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  #toolbar {
+    width: 100%;
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+  }
+  
+  #canvasContainer {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  #canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #markdownPane,
+  #notesPane {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 300px;
+    background: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    z-index: 10;
+    transition: transform 0.3s ease;
+  }
+  
+  #markdownPane {
+    left: 0;
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  #markdownPane.open {
+    transform: translateX(0); /* Visible when open */
+  }
+  
+  #notesPane {
+    right: 0;
+    transform: translateX(100%); /* Hidden by default */
+    height: 100%; /* Force full height */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  #notesPane.open {
+    transform: translateX(0); /* Visible when open */
+  }
+  
+  #markdownPreview {
+    flex: 1;
+    overflow-y: auto;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  #notesArea {
+    width: 100%;
+    height: 40%;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  
+  #toggleNotesBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 15;
+  }
+
+  #writePane,
+  #readPane {
+    overflow-y: auto; /* Add vertical scrollbars */
+    height: 100%; /* Ensure full height */
+    box-sizing: border-box; /* Include padding in height calculation */
+  }
