@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fractal Mind Map</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="toggleNotesBtn" onclick="toggleNotes()">Toggle Notes</button>
+  <div id="toolbar">
+    <button onclick="addNode()">Add Node</button>
+    <button onclick="undo()">Back</button>
+    <button onclick="redo()">Forward</button>
+    <button onclick="download()">Export JSON</button>
+    <input type="file" id="fileInput" accept=".json"/>
+    <button onclick="resetView()">Reset View</button>
+  </div>
+  <div id="canvasContainer">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div id="markdownPane">
+    <h2>Read</h2>
+    <div id="markdownPreview"></div>
+  </div>
+  <div id="notesPane">
+    <h2>Write</h2>
+    <textarea id="notesArea" placeholder="Write notes for this node..."></textarea>
+  </div>
+
+  <script type="module" src="/src/mindmap.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>
